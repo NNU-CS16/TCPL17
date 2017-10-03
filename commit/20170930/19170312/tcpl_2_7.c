@@ -5,11 +5,13 @@
 }  
     int main()  
 {  
-    unsigned int x=105;  
+    unsigned int x;
     unsigned int y;  
-    int p=5;  
-    int n=3;  
+    int p;  
+    int n;
+    printf("Please enter the number of x,p,n.\n");
+    scanf("%u%d%d",&x,&p,&n); 
     y = invert(x, p, n);  
-    printf("%d\n", y);
+    printf("%u\n", y);
     return 0;  
 }

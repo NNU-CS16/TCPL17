@@ -5,11 +5,13 @@
 }  
     int main()
 {  
-    unsigned int x=73;  
-    unsigned int y=23;  
-    int p=5;  
-    int n=3;  
-    int r;  
+    unsigned int x;  
+    unsigned int y;  
+    int p;  
+    int n;  
+    int r;
+    printf("Please enter the number of x,y,p,n.\n");
+    scanf("%u%u%d%d",&x,&y,&p,&n);
     r=setbits(x, p, n, y);  
     printf("%d\n", r);
     return 0;  
