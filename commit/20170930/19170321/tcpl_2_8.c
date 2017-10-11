@@ -1,6 +1,5 @@
 #include<stdio.h>
-  
-int main()
+  int main()
 {
     unsigned short a,b,c;
     short int n;

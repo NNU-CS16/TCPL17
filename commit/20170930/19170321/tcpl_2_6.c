@@ -1,5 +1,4 @@
 #include<stdio.h>
-
 int main()
 {
     int n=3,p=5,x=73,y=23,a;
