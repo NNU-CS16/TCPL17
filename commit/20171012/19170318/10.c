@@ -20,8 +20,8 @@ int main()
     
     while (fabs(a-b)>1e-3)
     {
-      if (fabs(f(a))==0) {mid=a; break;}
-      if (fabs(f(b))==0) {mid=b; break;}
+      if (fabs(f(a))<1e-6) {mid=a; break;}
+      if (fabs(f(b))<1e-6) {mid=b; break;}
       
       mid=(a+b)/2;
       
