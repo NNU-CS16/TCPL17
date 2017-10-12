@@ -1,30 +1,21 @@
 <<<<<<< HEAD
-/*This is the first C program.*/
-#include <stdio.h>
+#include<stdio.h>
 int main()
 {
-    printf("Hello World.\n");
-
-    return 0;
-}
+printf("hello world");
+return 0;
 =======
 <<<<<<< HEAD
 #include <stdio.h>
-int main()
-{
- printf("Hello World.\n");
- return 0;
-}
-
-=======
-/*This is the first C program.*/
-#include <stdio.h>
 int main ()
 {
-    printf("Hello World.");
+     printf("Hello.\n");
+=======
+i#include <stdio.h>
+int main ()
+{
+     printf("Hello World.\n");
+>>>>>>> ed29fe502c51a206ea6e22a7721e317a04aaeada
     return 0;
+>>>>>>> 8962469a704928a0f314a120fd863ca6bbdf28b0
 }
-
-
->>>>>>> 2882a092fe091c07dd73c001e30c7d4e75972184
->>>>>>> 7474b8e5a0aa775d258dd11a86cd2f8c7b8c52c6
