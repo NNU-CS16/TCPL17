@@ -1,0 +1,10 @@
+#include<stdio.h>
+#include<math.h>
+int main() 
+{
+	
+       	double x=0,y;
+	scanf("y=%lf\n",y);
+	y=pow(x,3)+2*x*x+3*x+1;
+	 return 0;
+}
