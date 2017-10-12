@@ -21,15 +21,13 @@ int main()
     while (fabs(a-b)>1e-3)
     {
       
-      if (fabs(f(a))<1e-6) break;
-      if (fabs(f(b))<1e-6) {a=b; break;}
-      
-      if (f(a)*f((a+b)/2)<=0) b=(a+b)/2;
+      if (fabs(f((a+b)/2))<1e-6) break;
+      if (f(a)*f((a+b)/2)<0) b=(a+b)/2;
       else a=(a+b)/2;
     
     }
   
-    printf("%.2f\n",a);
+    printf("%.2f\n",(a+b)/2);
     
     return 0;
   
