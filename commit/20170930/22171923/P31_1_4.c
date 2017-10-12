@@ -8,6 +8,5 @@ int main()
   int y=j+12/++j;
   printf("%d,%d,%d,%d\n",i,j,m,n);
   printf("%d,%d,%d,%d\n",i,j,x,y);
-    return 0;
+  return 0;
 }
-  
