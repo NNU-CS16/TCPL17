@@ -1,10 +1,13 @@
 #include<stdio.h>
 int main()
 {
-int i=2,sum=0;
-for(i=2;i<=100;i+=2)
+int a,sum=0;
+for(a=2;a<=100;a++)
 {
-sum+=i;
+if (a%2==0)
+{
+sum=sum+a;
+}
 }
 printf("sum=%d\n",sum);
 return 0;
