@@ -1,12 +1,13 @@
 #include <stdio.h>
 int main()
 {
-    int a,b,t;
+    int a,b,c;
     scanf("%d%d",&a,&b);
+
     printf("a=%d,b=%d\n",a,b);
-    t=a;
+    c=a;
     a=b;
-    b=t;
+    b=c;
     printf("a=%d,b=%d\n",a,b);
     a=a^b;
     b=b^a;
