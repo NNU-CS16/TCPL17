@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <math.h>
 
-int a0,a1,a2,a3;
+double a0,a1,a2,a3;
 
-float f(float x)
+double f(double x)
 {
     
     return a3*x*x*x+a2*x*x+a1*x+a0;
@@ -13,23 +13,25 @@ float f(float x)
 int main()
 {
   
-    float a,b;
+    double a,b,mid;
     
-    scanf("%d%d%d%d",&a3,&a2,&a1,&a0);
-    scanf("%f%f",&a,&b);
+    scanf("%lf%lf%lf%lf",&a3,&a2,&a1,&a0);
+    scanf("%lf%lf",&a,&b);
     
     while (fabs(a-b)>1e-3)
     {
+      if (fabs(f(a))<1e-6) {mid=a; break;}
+      if (fabs(f(b))<1e-6) {mid=b; break;}
       
-      if (fabs(f(a))<1e-6) break;
-      if (fabs(f(b))<1e-6) {a=b; break;}
+      mid=(a+b)/2;
       
-      if (f(a)*f((a+b)/2)<=0) b=(a+b)/2;
-      else a=(a+b)/2;
+      if (fabs(f(mid))<1e-6) break;
+      if (f(a)*f(mid)<0) b=mid;
+      else a=mid;
     
     }
   
-    printf("%.2f\n",a);
+    printf("%.2f\n",mid);
     
     return 0;
   
