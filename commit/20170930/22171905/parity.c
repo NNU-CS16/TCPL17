@@ -1,9 +1,9 @@
-#include<stdio.h>
+#include <stdio.h>
+
 int main()
 {
-    int n,flag;
-    scanf("%d",&n);
-    flag=(n&1);
+    int n = 10;
+    int flag =(n%2==0)?(0):(1);
     printf("%d\n",flag);
     return 0;
 }
