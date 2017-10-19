@@ -2,7 +2,7 @@
 int main()
 {
   int i,j,k,n;
-  printf("number of row you like is");
+  printf("the number of row you like is");
   scanf("%d",&n);
 
   for(i=1;i<=n;i++)
