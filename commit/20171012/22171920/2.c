@@ -6,7 +6,7 @@ int main()
    sum+=n*(n+1)*(n+2);
    
 
-   printf("1*2*3*4*......*99=%d\n",sum);
+   printf("1×2×3+4×5×6+...+97×98×99=%d",sum);
    
    return 0;
 }
