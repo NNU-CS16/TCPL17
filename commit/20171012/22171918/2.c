@@ -1,11 +1,9 @@
 #include <stdio.h>
 int main()
 {
-  int x,y,a,b;
+  int x,y;
   for(x=1;x<=97;x+=3)
-  a=x+1;
-  b=x+2;
-  y=x*a*b;
+  y=y+x*(x+1)*(x+2);
   printf("%d\n",y);
   return 0;
 }
