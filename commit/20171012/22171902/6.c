@@ -1,4 +1,6 @@
 #include<stdio.h>
+<<<<<<< HEAD
+=======
 int main()
 {
 	int i,j,k;
@@ -30,3 +32,4 @@ int main()
    
 
 }
+>>>>>>> 7fd41aba40d2ff457ddfc4eed172e7a4b923a49b
