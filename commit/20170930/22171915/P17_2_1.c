@@ -21,5 +21,9 @@ int main( )
  printf("signed long int size=%d\n",sizeof(b));
  printf("unsigned int size=%d\n",sizeof(x));
  printf("unsigned long int size=%d\n",sizeof(y));
+ printf("short int size=%d\n",sizeof(p));
+ printf("signed short int size=%d\n",sizeof(q));
+ printf("unsigned ahort int size=%d\n",sizeof(r));
+ return 0;
 }
 
