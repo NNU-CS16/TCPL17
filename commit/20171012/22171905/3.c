@@ -11,8 +11,6 @@ int main()
 {
     sum+=q;//累加每次a的新值
     q=q*10+sn;
-
-    printf("%d\n",sum);
 }
     printf("%d\n",sum);
     return 0;
