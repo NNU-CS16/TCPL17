@@ -1,0 +1,91 @@
+  #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int main()
+{
+    char a[500001];
+    int i,n,flag=0 ;
+    char *p;
+    for(i=0;i<500001;i++){
+    scanf("%c",&a[i]);
+        if(a[i]=='\n'){
+        a[i]='\0';
+        n=i;
+        break;
+        }
+    }
+
+
+    for(i=n-1;i>=0;i--){
+    if(a[i]==' '){
+    a[i]='\0';
+    }
+    if(a[i-1]==' '&&a[i]!=' '&&a[i]!='\0'){
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int main()
+{
+    char a[500001];
+    int i,n,flag=0 ;
+    char *p;
+    for(i=0;i<500001;i++){
+    scanf("%c",&a[i]);
+        if(a[i]=='\n'){
+        a[i]='\0';
+        n=i;
+        break;
+        }
+    }
+
+
+    for(i=n-1;i>=0;i--){
+    if(a[i]==' '){
+    a[i]='\0';
+    }
+    if(a[i-1]==' '&&a[i]!=' '&&a[i]!='\0'){
+    p=&a[i];
+
+
+    if(flag==0)printf("%s",p);
+    if(flag>=1)printf(" %s",p);
+     flag++;
+    }
+    }
+
+
+     if(a[0]!='\0'&&flag>=1){
+         printf(" %s",a);
+     }
+     if(a[0]!='\0'&&flag==0){
+
+
+         printf("%s",a);
+
+
+     }
+    return 0;
+f(a[i-1]==' '&&a[i]!=' '&&a[i]!='\0'){
+    p=&a[i];
+
+
+    if(flag==0)printf("%s",p);
+    if(flag>=1)printf(" %s",p);
+     flag++;
+    }
+    }
+
+
+     if(a[0]!='\0'&&flag>=1){
+         printf(" %s",a);
+     }
+     if(a[0]!='\0'&&flag==0){
+
+
+         printf("%s",a);
+
+
+     }
+    return 0;
+}
+}
