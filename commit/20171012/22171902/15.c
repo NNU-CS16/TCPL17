@@ -1,18 +1,18 @@
 #include<stdio.h>
 int main()
 {
-	int a,b=0;
+	int a,t,i=0;
+	int num=[20]={0};
 	scanf("%d",&a);
-	while(a)
+	t=a;
+	while(t)
 	{
-	 b=b*2+a%2;
- 	 a/=2;
+	 num[i++]=t%2;
+ 	 t/=2;
 	}
-	while(b)
-	{
-		printf("%d",b%2);
-		b/=2;
-	}
+	for(--i;i>=0;i--)
+	 printf("%d",num[i]);
+	printf("\n");
 	printf("%o\n",a);
 	printf("%x\n",a);
 
