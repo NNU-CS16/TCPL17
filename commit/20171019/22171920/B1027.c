@@ -32,6 +32,6 @@ int main(){
         }
     }
     printf("%d\n",N-m);
-     
+
      return 0;
 }
