@@ -2,10 +2,11 @@
 int main()
 {
 
-int i,j,k,n,f,e;
+int i,j,k,n,f,e,y;
 scanf("%d", &n);
 for(e=1,f=1;f<n;e++)
    f=2*e+f;
+   y=n-f;
 for(i=e-2;i>=1;i--)
 {
 for(j=i;j<=20-1;j++)
@@ -23,6 +24,7 @@ for(k=1;k<=2*i-1;k++)
 printf("*");
 printf("\n");
 }
+printf("%d\n", y);
 return 0;
 }
 
