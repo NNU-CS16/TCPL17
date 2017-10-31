@@ -3,7 +3,7 @@
 #include<math.h>
 int main()
 {
- int a[100000];
+ int a[100000],b[100000];
  int n,i,max,flag1,min,flag2,sum=0,sum2=0;
  float average,s2,s;
  scanf("%d",&n);
@@ -26,11 +26,11 @@ int main()
  for(i=0;i<=n-1;i++)
   sum=sum+a[i];
  average=(float)sum/n;
- for(i=0;i<n-1;i++)
-  a[i]=(a[i]-average)*(a[i]-average);
  for(i=0;i<=n-1;i++)
-  sum2=sum2+a[i];
- s2=(float)sum/n;
+  b[i]=(a[i]-average)*(a[i]-average);
+ for(i=0;i<=n-1;i++)
+  sum2=sum2+b[i];
+ s2=(float)sum2/n;
  s=sqrt(s2);
 printf("sum=%d,average=%.2f,s2=%.2f,s=%.2f\n",sum,average,s2,s);
 return 0;
