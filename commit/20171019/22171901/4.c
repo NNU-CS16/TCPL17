@@ -1,0 +1,27 @@
+#include<stdio.h>
+int main()
+{
+  int X,Y,N,f;
+  printf("请输入N（N<=10000）:");
+  scanf("%d",&N);
+  f=0;
+ 
+  for(X=1;X<=100;X++)
+   {
+    for(Y=X;Y<=100;Y++)
+     {
+       if(X*X+Y*Y==N)
+        {
+         f=1;
+         printf("%d %d\n",X,Y);
+        } 
+     } 
+   }
+         if(f==0)
+         printf("No Solution");
+     
+   
+       return 0;
+      
+} 
+    
