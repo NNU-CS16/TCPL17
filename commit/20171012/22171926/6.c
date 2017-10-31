@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #include<stdio.h>
 int main()
 {
@@ -17,5 +18,42 @@ for(i=n-1;i>=1;i-=1)
 	printf("\n");
         }}
 else printf("wrong number\n");
+=======
+#include <stdio.h>
+int main()
+{
+int N,i,j;
+scanf("%d",&N);
+for(i=0;i<N;i++) 
+
+{for(j=0;j<N-i;j++)    
+
+ printf(" ");
+
+for(j=0;j<2*i+1;j++)    
+
+printf("*");
+
+printf("\n");      
+
+}
+
+for(i=N-2;i>=0;i--)
+
+{
+
+for(j=0;j<N-i;j++)
+
+ printf(" ");
+
+for(j=0;j<2*i+1;j++)
+
+printf("*");
+
+printf("\n");
+
+}
+
+>>>>>>> ea6a6fac9148946b50f85af540788d33cbf57a8e
 return 0;
 }

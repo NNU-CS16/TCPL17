@@ -29,3 +29,13 @@ int main()
       if (f(a)*f(mid)<0) b=mid;
       else a=mid;
     
+<<<<<<< HEAD
+=======
+    }
+  
+    printf("%.2f\n",mid);
+    
+    return 0;
+  
+}
+>>>>>>> ea6a6fac9148946b50f85af540788d33cbf57a8e

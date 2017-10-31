@@ -21,4 +21,7 @@ for (j=0;j<=i;j++)
 printf("%d",a[j]);
 printf("\n");return;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> ea6a6fac9148946b50f85af540788d33cbf57a8e
