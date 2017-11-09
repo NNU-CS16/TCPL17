@@ -32,6 +32,6 @@
             scanf ("%d", &mat[i][j]);
     }   
     printf ("transposed=\n");
-    matrix_transpose (mat,transposed);
+    matrix_transpose (mat, transposed);
     return 0;
  }
