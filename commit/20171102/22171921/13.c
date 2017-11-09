@@ -2,7 +2,7 @@
 #define M 4
 #define N 5
 
-void transpose(int mat[][N], int transposed[][M])
+void matrix_transpose(int mat[][N], int transposed[][M])
 {
     int i, j;
     for (i = 0;i < M;i++)
@@ -15,11 +15,11 @@ int main()
     int mat[M][N] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 
                      11, 12, 13, 14, 15, 16, 17, 18, 19, 20};
     int i, j, transposed[N][M];
-    transpose(mat, transposed);
+    matrix_transpose(mat, transposed);
     for (i = 0;i < N;i++)
     {
         for (j = 0;j < M;j++)
-        printf("%5d\n", transposed[N][M]);
+            printf("%5d\n", transposed[j][i]);
     }
     return 0;
 }
