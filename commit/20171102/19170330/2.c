@@ -1,19 +1,26 @@
-#include<stdio.h>
-void print_hex(int a)
+#include <stdio.h>
+void print_hex (int a)
 {
-     if (a>0)
-    {
-       int i;
-       i=a%16;
-       switch(i)
+     if (a > 0)
+     {
+        int i;
+        i=a % 16;
+        switch (i)
         {
-          case 10:printf("A");break;
-          case 11:printf("B");break;
-          case 12:printf("C");break;
-          case 13:printf("D");break;
-          case 14:printf("E");break;
-          case 15:printf("F");break;
-           default:printf("%c",i+48);break;
+            case 10:printf ("A");
+                break;
+            case 11:printf ("B");
+                break;
+            case 12:printf ("C");
+                break;
+            case 13:printf ("D");
+                break;
+            case 14:printf ("E");
+                break;
+            case 15:printf ("F");
+                break;
+            default:printf ("%c",i+48);
+                break;
         }
     }
 }
@@ -21,7 +28,7 @@ void print_hex(int a)
 int main()
 {
     int a;
-    scanf ("%d",&a);
+    scanf ("%d", &a);
     print_hex(a);
     printf("\n");
     return 0;
