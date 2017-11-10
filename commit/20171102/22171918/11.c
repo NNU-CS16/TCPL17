@@ -3,18 +3,18 @@
 void reverse(char* str);
 int main ()
 {
-   char s[1000];
-   scanf("%s",s);
-   reverse(s);
-   printf("%s\n",s);
+   char str[100];
+   scanf("%s",str);
+   reverse(str);
+   printf("%s\n",str);
    return 0;
 }
 void reverse(char* str)
 {
-   char s[1000];
+   char s[100];
    strcpy(s,str);
-   int i=strlen(s),j;
-   for(j=0;j<i;j++)
-     str[j]=s[i-j-1];
+   int  len=strlen(s),a;
+   for(a=0;a<len;a++)
+     str[a]=s[len-a-1];
 }
    
