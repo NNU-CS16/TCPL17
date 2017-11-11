@@ -1,4 +1,4 @@
-#include<stdio.h>
+#include <stdio.h>
 #define M 2
 #define K 3
 #define N 2
