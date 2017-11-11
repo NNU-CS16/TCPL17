@@ -1,6 +1,4 @@
-ar print_hex [16] = {'0','1','2','3','4','5','6','7','8','9',
-                     'A','B','C','D','E','F'};
-include <stdio.h>
+#include <stdio.h>
 void print_hex (int a);
 
 int main ()
@@ -13,18 +11,25 @@ int main ()
 
 void print_hex (int n)
 {
-    int ys,i; // i是位数,ys是余数
+    int ys,i;
     int a[100];
-    char print_hex [16] = {'0','1','2','3','4','5','6','7','8','9',
-                     'A','B','C','D','E','F'};
-    while (n > 0)
+    char A ,B ,C ,D ,E ,F;
+    for (i = 0; n != 0; i++)
       {
         ys = n % 16;
-        a[i] = ys;
         n = n / 16;
-        i++;
+        switch (ys)
+        {
+          case 10:  a[i] = A;
+          case 11:  a[i] = B;
+          case 12:  a[i] = C;
+          case 13:  a[i] = D;
+          case 14:  a[i] = E;
+          case 15:  a[i] = F;
+          default:  a[i] = ys;
+        }
       }
 
     for ( i=i-1; i >= 0 ; i--)
-      printf ("%c",print_hex[a[i]]);
+      printf ("%c",a[i]);
 }
