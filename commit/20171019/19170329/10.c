@@ -1,3 +1,4 @@
+//a*b%c=(a%c)*(b%c)%c.
 #include<stdio.h>
 int pow_mod(int,int,int);
 int main()
