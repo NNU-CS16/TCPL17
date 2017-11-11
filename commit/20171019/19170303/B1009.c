@@ -9,7 +9,7 @@ int main()
     int j = 0;
     int count= 0;
     gets(a);
-    for(i = 0; i < strlen(a); i++);
+    for(i = 0; i < strlen(a); i++)
     {
         if (a[i] == ' ')
  { 
