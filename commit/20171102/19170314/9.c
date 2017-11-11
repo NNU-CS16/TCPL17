@@ -10,14 +10,14 @@ int is_int_pal(int n)
   char a[1000];
   for(i=0;i<=l;i++)
   {
-  a[i]=s[l-i-1];
+      a[i]=s[l-i-1];
   }
   int k;
   k=strcmp(a,s);
   if(k==0)
-  printf("0");
+      printf("0");
   else 
-  printf("-1");
+      printf("-1");
 }
 int main()
 {

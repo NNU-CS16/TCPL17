@@ -5,7 +5,7 @@ int fac_bit_count(int n)
     int i,p;
     for(p=1,i=2;i<=n;i++)
     {
-    p*=i;
+        p*=i;
     }
 
    char arr[100000];
