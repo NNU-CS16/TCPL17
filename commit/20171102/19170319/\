@@ -1,0 +1,38 @@
+#include<stdio.h>
+#include<string.h>
+int is_str_pal(const char* str)
+{
+	char hw1[100];
+	char hw2[100];
+	int i,j;
+	for (i=0; ;++i)
+	{
+    	hw1[i] = *(str+i);
+		if (hw1[i] == ' ')
+			break;
+	}
+printf("%s",hw1);
+	for (--i,j=0;i >= 0;--i,++j)
+	{
+    	hw2[j] = hw1[i];
+	}
+printf("%s",hw2);
+	if (strcmp(hw1,hw2) == 0)
+		return 0;
+	else
+		return -1;
+}
+int main()
+{
+	int i = 0;
+	char hw[100];
+	for ( ;i<=99;++i)
+	{
+		scanf("%c",&hw[i]);
+		if (hw[i] == ' ')
+			break;
+	}
+	const char* str=hw;
+	printf("%d",is_str_pal(str));
+	return 0;
+}
