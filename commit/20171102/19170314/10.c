@@ -7,9 +7,9 @@ int is_str_pal(const char* str)
    int i=0; 
    for(i=0;i<l;i++)
    {
-   if(str[i]!=str[l-i-1])
-   return -1;
-   return 0;
+       if(str[i]!=str[l-i-1])
+       return -1;
+       return 0;
    }
 }
 int main()
