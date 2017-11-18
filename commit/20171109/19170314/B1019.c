@@ -3,16 +3,13 @@ int j,k;
 int blackhole(int n)
 {
     int a[4];
-    int i,temp;
-    if(n/1000!=0)
+    int i,temp,t;
         a[0]=(n/1000);
-    if((n-a[0]*1000)/100!=0)
         a[1]=(n-a[0]*1000)/100;
-    if((n-a[0]*1000-a[1]*100)/10!=0)
         a[2]=(n-a[0]*1000-a[1]*100)/10;
-    if(n-a[0]*1000-a[1]*100-a[2]*10!=0)
-        a[3]=n-a[0]*1000-a[1]*100-a[2]*10!=0;
-    for(i=0;i<3;i++)
+        a[3]=n-a[0]*1000-a[1]*100-a[2]*10;
+    for(t=3;t>0;t--)
+    for(i=0;i<t;i++)
     {
         if(a[i]<a[i+1])
         {
@@ -26,18 +23,15 @@ int blackhole(int n)
 }
 int blackhole1(int n)
 {
-    int i,temp;
+    int i,temp,t;
     int a[4];
-    if(n/1000!=0)
         a[0]=(n/1000);
-    if((n-a[0]*1000)/100!=0)
         a[1]=(n-a[0]*1000)/100;
-    if((n-a[0]*1000-a[1]*100)/10!=0)
         a[2]=(n-a[0]*1000-a[1]*100)/10;
-    if(n-a[0]*1000-a[1]*100-a[2]*10!=0)
-        a[3]=n-a[0]*1000-a[1]*100-a[2]*10!=0;
+        a[3]=n-a[0]*1000-a[1]*100-a[2]*10;
 
-    for(i=0;i<3;i++)
+    for(t=3;t>0;t--)
+    for(i=0;i<t;i++)
     {
         if(a[i]>a[i+1])
         {
@@ -63,9 +57,8 @@ int main()
         j=blackhole(m);
         k=blackhole1(m);
         
-        if(m==6174)
-            break;
     }
+    printf("%d-%d=%d",j,k,m);
 return 0;
 }
         
