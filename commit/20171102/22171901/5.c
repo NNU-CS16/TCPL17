@@ -10,13 +10,15 @@ int main()
     return 0;
 }
 
-fac_bit_count (int n)
+int fac_bit_count (int n)
 {
-    int i;
-    unsigned long m = 1;
-    for (i = 0 ; m != 0 ; i++)
-      for (n = n ; n > 0 ; n--)
-         m = m * n;
-         m = m / 10;
+    int i , tmp = n;
+    while (n > 1)
+    {
+      n--;
+      tmp = tmp*n;
+    }
+    for (i = 1; tmp > 10 ; i++)
+      tmp / =10;
     return i;
 }
