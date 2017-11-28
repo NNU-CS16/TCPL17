@@ -32,7 +32,9 @@ int main()
 {
     int left,right,query;
     int a[100];
+    printf("输入区间和要查找的数字");
     scanf("%d%d%d",&left,&right,&query);
+
     for(int i=0;i<=right;i++)
         scanf("%d",&a[i]);
     printf("%d\n",recursive(a,left,right,query));
