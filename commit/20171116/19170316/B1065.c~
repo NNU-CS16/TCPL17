@@ -1,0 +1,20 @@
+#include<stdio.h>
+
+int main()
+{
+int n;
+scanf("%d",&n);
+int a[100000];
+for(int s=0;s<2n-1;s++)
+	scanf("%5d",&a[s]);
+int m;
+scanf(("%d",&m);
+int b[10000];
+for(int k=0;k<m-1;k++)
+	scanf("%5d",&b[k]);
+int minus=m;
+
+
+
+
+}
