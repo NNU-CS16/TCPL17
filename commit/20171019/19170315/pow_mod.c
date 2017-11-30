@@ -5,9 +5,14 @@ int mod(int x,int y);
 int main()
 {
 int a, b, c, d, n;
+d=a;
 scanf("%d%d%d",&a,&b,&c);
 
-d=pow(a,b);
+int i;
+for(i=0;i<b;i++)
+  {
+   d*=a;
+  }
 n=mod(d,c);
 printf("%d\n",n);
 return 0;
