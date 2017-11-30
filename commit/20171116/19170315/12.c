@@ -12,7 +12,11 @@
       printf("%d\n",n);
       return 0;
   }
+<<<<<<< HEAD
  
+=======
+
+>>>>>>> 4cf8c4e4af49134b907ed6e65c5c31cc1d10c94d
   int my_strcmp(const char* str1, const char* str2)
   {
       int len_str1 = strlen(str1);
@@ -34,4 +38,9 @@
           }
       }
       return flag;
+<<<<<<< HEAD
   }    
+=======
+  }
+
+>>>>>>> 4cf8c4e4af49134b907ed6e65c5c31cc1d10c94d

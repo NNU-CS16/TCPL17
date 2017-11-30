@@ -22,4 +22,8 @@
           puts(pstr[i]);
       return 0;
   }
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> 4cf8c4e4af49134b907ed6e65c5c31cc1d10c94d

@@ -30,7 +30,11 @@
               a[i][j] = n++;
           }
           c++;
+<<<<<<< HEAD
       }   
+=======
+      }
+>>>>>>> 4cf8c4e4af49134b907ed6e65c5c31cc1d10c94d
       for (i = 0; i < N; i++)
       {
           for (j = 0; j < N; j++)
@@ -42,3 +46,7 @@
       printf("\n");
       return 0;
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4cf8c4e4af49134b907ed6e65c5c31cc1d10c94d

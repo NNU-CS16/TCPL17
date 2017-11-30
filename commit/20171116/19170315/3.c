@@ -45,6 +45,7 @@
               return binary_search_recursive(arr, left, ((left + right) / 2 - 1), query);
       }
   }
+<<<<<<< HEAD
   int binary_search_iterative(int arr[], int left, int right, int query)
   {
       do
@@ -68,4 +69,6 @@
       }while(right >= left + 1);
   }
 
+=======
+>>>>>>> 4cf8c4e4af49134b907ed6e65c5c31cc1d10c94d
 

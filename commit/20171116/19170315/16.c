@@ -1,6 +1,10 @@
   #include <stdio.h>
   #include <stdlib.h>
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> 4cf8c4e4af49134b907ed6e65c5c31cc1d10c94d
   int main(int argc, char *argv[])
   {
       FILE *pSourceFile, *pDestFile;
@@ -25,4 +29,8 @@
       fclose(pDestFile);
       return 0;
   }
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> 4cf8c4e4af49134b907ed6e65c5c31cc1d10c94d
