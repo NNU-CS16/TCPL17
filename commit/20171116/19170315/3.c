@@ -45,4 +45,30 @@
               return binary_search_recursive(arr, left, ((left + right) / 2 - 1), query);
       }
   }
+<<<<<<< HEAD
+  int binary_search_iterative(int arr[], int left, int right, int query)
+  {
+      do
+      {
+          if (right == left + 1)
+          {
+              if (arr[left] == query)
+                 return left;
+              if (arr[right] == query)
+                 return right;
+              else
+                 return -1;
+          }
+          if (right > left + 1)
+          {
+              if (query >= arr[(left + right) / 2] && query < arr[right])
+                  left = (left + right) / 2;
+              if (query < arr[(left + right) / 2] && query > arr[left])
+                  right = (left + right) / 2;
+          }
+      }while(right >= left + 1);
+  }
+
+=======
+>>>>>>> 4cf8c4e4af49134b907ed6e65c5c31cc1d10c94d
 
