@@ -1,6 +1,10 @@
   #include <stdio.h>
   void SelectionSort(int arr[], int left, int right);
+<<<<<<< HEAD
+  
+=======
 
+>>>>>>> 4cf8c4e4af49134b907ed6e65c5c31cc1d10c94d
   int main()
   {
       int arr[100];
@@ -35,4 +39,7 @@
       }
       printf("%d\n",arr[right]);
   }
+<<<<<<< HEAD
+=======
 
+>>>>>>> 4cf8c4e4af49134b907ed6e65c5c31cc1d10c94d
