@@ -1,4 +1,4 @@
-  #include <stdio.h>
+  i#include <stdio.h>
   void InsertionSort(int arr[], int left, int right) ;
 
   int main()

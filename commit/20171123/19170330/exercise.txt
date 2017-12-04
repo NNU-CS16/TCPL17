@@ -1,0 +1,10 @@
+question 1: a=2, b=0, c=1, d=2
+question 2: 20
+question 3: i > j
+question 4: 2, 5
+question 5: 10, 20, 30
+question 6: 0
+question 7: 2
+question 8: 10,4
+question 9: 801005, 810014
+question 10: 7
