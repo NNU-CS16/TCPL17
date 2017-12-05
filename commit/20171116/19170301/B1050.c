@@ -4,7 +4,7 @@
     int N, i, j, m, n;
     int num = 0, temp = 0;   
     scanf ("%d", &N);
-    int a[N];
+    int a[10000];
     for (i = 0; i < N; i++)
         scanf ("%d", &a[i]);
     for (i = 0; i < N - 1; i++)
@@ -20,15 +20,31 @@
     int b[m][n];
     int k;
     for(k = 0; k < m ; k++)
-    {
+    {        
         for (i = k; i < n - k; i++)  
+        {
+            if (num == N)
+                break;
             b[k][i] = a[num++];
+        }
         for (j = k + 1; j < m - k; j++)
+        {
+            if (num == N)
+                break;
             b[j][i-1] = a[num++];
+        }
         for (i = n - k - 2; i >= k; i--)
+        {
+            if (num == N)
+                break;                
             b[j-1][i]=a[num++];
+        }
         for (j = m - k - 2; j >= k + 1; j--)
+        {
+            if (num == N)
+                break;
             b[j][i+1]=a[num++];
+        }
     }
     for (i = 0; i < m; i++)
     {  
