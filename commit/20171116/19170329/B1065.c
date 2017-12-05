@@ -1,52 +1,53 @@
-  #include<stdio.h>
+  #include <stdio.h>
 
   int main()
   {
-        int n,m,i,j,k;
-        int a[n][2];
-	int b[m];
-	scanf("%d",&n);
+        int i,j,k,t,flag = 0;
+        int n, m;
+        int a[50000][2] = {0}, b[10000] = {0}, c[10000] = {0};
+        scanf("%d",&n);
 
         for( i = 0; i < n; i++ )
-                for(j = 0; j < 2;j++)
-                        scanf("%d",&a[i][j]);
+                for( j = 0; j < 2; j++ )
+                        scanf("%d", &a[i][j]);
+        scanf("%d", &m);
+        for( i = 0; i < m; i++ )
+                scanf("%d",&b[i]);
 
-        scanf("%d",&m);
-        
-        for(i = 0; i < m; i++)
-                scanf("%d", &b[i]);
-
-        for(i = 0; i < n; i++)        
-                for(j = 0; j < m; j++)
-		        if(a[i][0] == b[j] || a[i][1] == b[j])
-			{
-                                for(k = j + 1; k < m; k++)    
-				{
-                                        if(a[i][0] == b[k] || a[i][1] == b[k])
-                                        {
-                                                b[k] = 0;
-                                                b[j] = 0;
-                                                break;
-                                        }
-                                }
-			}
-                        
-                
-        
-        int b1[20],num = 0;
-        for(i = 0; i < m; i++)
+        int cp = 0;
+        for( k = 0; k < m; k++ )
         {
-                if(b[i] != 0)
+                for( i = 0; i < n; i++ )
+                        {
+                                if( b[k] == a[i][0] )
+                                {
+                                        for( t = 0; t < m; t++ )
+                                                if(  b[t] == a[i][1] )
+                                                {
+                                                        b[k] = flag;
+                                                        b[t] = flag;
+                                                        cp +=2;
+                                                }
+                                }
+                        }
+        }
+
+        int k1 = 0;
+        for ( i = 0; i < m; i++ )
+        {
+
+                if( b[i] != flag )
                 {
-                        b1[num] = b[i];
-                        num++;
+                        c[k1] = b[i];
+                        k1++;
                 }
         }
-        printf("%d\n",num);
-        for( i = 0; i < num; i++)
-        {
-                printf("%d ",b1[i]);
-        }
-        printf("\n");
+
+        printf("%d\n", m - cp);
+        for( i = 0; i < k1; i++ )
+                printf("%d ", c[i]);
+
         return 0;
   }
+
+
