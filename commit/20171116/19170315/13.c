@@ -10,7 +10,11 @@
   void Output(struct Student stu[], int n);
   void Swap(struct Student *p1, struct Student *p2);
   void Sort(struct Student *pstu, int n);
+<<<<<<< HEAD
+  
+=======
 
+>>>>>>> 4cf8c4e4af49134b907ed6e65c5c31cc1d10c94d
   int main()
   {
       struct Student *pstus;
@@ -23,7 +27,11 @@
       free(pstus);
       return 0;
   }
+<<<<<<< HEAD
+  
+=======
 
+>>>>>>> 4cf8c4e4af49134b907ed6e65c5c31cc1d10c94d
   struct Student * Input(int n)
   {
       int i;
@@ -34,7 +42,11 @@
       }
       return pstus;
   }
+<<<<<<< HEAD
+  
+=======
 
+>>>>>>> 4cf8c4e4af49134b907ed6e65c5c31cc1d10c94d
   void Swap(struct Student* p1, struct Student* p2)
   {
       struct Student temp;
@@ -42,6 +54,10 @@
       *p1 = *p2;
       *p2 = temp;
   }
+<<<<<<< HEAD
+  
+=======
+>>>>>>> 4cf8c4e4af49134b907ed6e65c5c31cc1d10c94d
   void Sort(struct Student* pstus, int n)
   {
       struct Student* pmin,* p;
@@ -70,4 +86,7 @@
       printf("%s %s\n",(pstu + n - 1)->name,(pstu + n - 1)->id);
       printf("%s %s\n",pstu->name,pstu->id);
   }
+<<<<<<< HEAD
+=======
 
+>>>>>>> 4cf8c4e4af49134b907ed6e65c5c31cc1d10c94d

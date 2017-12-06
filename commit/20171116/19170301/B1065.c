@@ -8,6 +8,8 @@
     for (i = 0; i < N; i++)
     {
         scanf ("%d %d", &ID1, &ID2);               
+        ID1++;
+        ID2++;
         couple[ID1] = ID2;
         couple[ID2] = ID1;
     }
@@ -15,8 +17,9 @@
     for (i = 0; i < M; i++)
     {
         scanf ("%d", &ID1); 
+        ID1++;
         if (couple[ID1] != 0) 
-        couple[ID1] = 0;
+            couple[ID1] = 0;
         else
         {
             couple[ID1] = -1;
@@ -31,13 +34,12 @@
         }
     printf ("%d\n", count);       
     for (i = 0; i < 100001; i++) 
-        if (couple[i] == -1)
+        if (couple[i + 1] == -1)
         {
             printf ("%05d", i);
             count--;
             if (count != 0)
-            printf (" ");            
+                printf (" ");            
         }
-    printf ("\n");    
     return 0;
  }
