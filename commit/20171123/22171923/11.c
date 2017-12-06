@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <stdlib.h>
+struct data
+{
+    int nr;
+    char const *value;
+}
+    dat[] = {{1, "Fool"}, {2, "Bar"}, {3, "Hello"}, {4, "World"}};
+int data_cmp(void const *Ihs, void const *rhs)
+{
+    struct data const *const 1 = Ihs;
+    struct data const *const r = rhs;
+    if (1 -> nr < r -> nr)
+        return -1;
+    else if (1 -> nr > r -> nr)
+        return 1;
+    else return 0;
+}
+int main(void)
+{
+    struct data key = {.nr=3};
+    struct data const *res = bsearch(&key, dat, sizeof dat / sizeof dat[0],
+                                    sizeof dat[0], data_cmp);
+    if (res)
+    {
+        printf("No %d:%s\n", res -> nr, res -> value);
+    }
+    else
+    {
+        printf("No %d not found\n", key.nr);
+    }
+}
