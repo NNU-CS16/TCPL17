@@ -1,0 +1,40 @@
+1.  a=2 
+    b=0 
+    c=1
+    d=2
+
+2.  15
+  
+    It does not affect the operation order of a++.
+
+3.  i>j  
+    int will translates to unsigned
+
+4.  2  5
+    ptr=a+5
+    *(ptr-1)= a[4]
+
+5.  10,20,30
+    p=arr
+    p's output value is a[0][0],a[0][1],a[0][2]
+
+6.  0
+    ASCII is 0
+
+7.  2
+    a>b is false
+    so the program directly determines the whole expression to be false
+
+8.  10,4
+    The end character will stop automatically.
+
+9.  p1 = 5 * sizeof(unsigned char) + 0x801000 = 0x801005
+    p2 = 5 * sizeof(unsighed long) + 0x801000 = 0x801028  ?
+  
+10. 5
+    i is only once defined
+    so i's value will not change 
+
+
+
+
