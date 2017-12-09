@@ -26,13 +26,13 @@ int Substr(const char* str, const char* substr)
 		temp = i;
 		if (str[i] == substr[j])
 		{
-			for ( ; j < len2; ++i, ++j)
+			for (j = 1; j < len2; ++i, ++j)
 			{
 				if (str[i] != substr[j])
 					break;
 			}							//比较从i位开始后几位的str与substr是否完全相等
 			if (j == len2)
-            	return i - len2;		//得出完全相等，返回i
+            	return temp;		//得出完全相等，返回i
 		}
 		i = temp;						//若不完全相等，回到i位下一位继续比较
 	}
