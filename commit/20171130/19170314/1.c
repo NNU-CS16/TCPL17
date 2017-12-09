@@ -3,19 +3,19 @@
 struct Node
 {
     int val;
-    struct Node *next;
+     struct Node* next;
 };
 struct Node *InsertBeforeHead(struct Node *head,struct Node *newp)
 {
-    newp->next=head;
-    head=newp;
+    newp->next = head;
+    head = newp;
     return head;
 }
-ostruct Node *construct(int arr[],int size)
+struct Node* construct(int arr[],int size)
 {
-    struct Node *head,*newp; int i;
+    struct Node *head,*newp;int i;
     head=NULL;
-    for(i=size-1;i>=0;i--)
+    for(i=0;i<size;i++)
     {
         newp=(struct Node *)malloc(sizeof(struct Node));
         newp->val=arr[i];
@@ -23,10 +23,10 @@ ostruct Node *construct(int arr[],int size)
     }
     return head;
 }
-void Output(struct Node *head)
+void output(struct Node *head)
 {
     struct Node *p;
-    p=head;o
+    p=head;
     while(p!=NULL)
     {
         printf("%d",p->val);
@@ -40,8 +40,10 @@ int main()
     scanf("%d",&size);
     int arr[size];
     for(int i=0;i<size;i++)
-        scanf("%d",arr+i);
+    {
+        scanf("%d",&arr[i]);
+    }
     struct Node *head=construct(arr,size);
-    Output(head);
+    output(head);
     return 0;
 }
