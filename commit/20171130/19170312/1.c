@@ -11,7 +11,7 @@ struct Node *InsertBeforeHead(struct Node *head,struct Node *newp)
     head=newp;
     return head;
 }
-struct Node *construct(int arr[],int size)
+ostruct Node *construct(int arr[],int size)
 {
     struct Node *head,*newp; int i;
     head=NULL;
@@ -26,7 +26,7 @@ struct Node *construct(int arr[],int size)
 void Output(struct Node *head)
 {
     struct Node *p;
-    p=head;
+    p=head;o
     while(p!=NULL)
     {
         printf("%d",p->val);
