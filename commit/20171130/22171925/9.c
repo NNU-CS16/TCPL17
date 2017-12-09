@@ -11,7 +11,7 @@ struct Node *InsertBeforeHead(struct Node *head,struct Node *newp)
     head=newp;
     return head;
 }
-ostruct Node *construct(int arr[],int size)
+struct Node *construct(int arr[],int size)
 {
     struct Node *head,*newp; int i;
     head=NULL;
@@ -23,16 +23,33 @@ ostruct Node *construct(int arr[],int size)
     }
     return head;
 }
+struct Node *DeleteHead(struct Node *head)
+{
+    struct Node *p;
+    if(head==NULL) return NULL;
+    p=head->next;
+    free(head);
+    return p;
+}
 void Output(struct Node *head)
 {
     struct Node *p;
-    p=head;o
+    p=head;
+    if(p==NULL)
+        printf("链表为空!\n");
     while(p!=NULL)
     {
         printf("%d",p->val);
         printf("%c",p->next==NULL ? '\n' : ' ');
         p=p->next;
     }
+}
+void clear(struct Node *head)
+{
+    while(head!=NULL)
+        head=DeleteHead(head);
+    printf("删除后:");
+    Output(head);
 }
 int main()
 {
@@ -42,6 +59,8 @@ int main()
     for(int i=0;i<size;i++)
         scanf("%d",arr+i);
     struct Node *head=construct(arr,size);
+    printf("删除前:");
     Output(head);
+    clear(head);
     return 0;
 }
