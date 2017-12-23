@@ -9,6 +9,7 @@
 #include "remove.h"
 #include "list.h"
 #include "save.h"
+#include "refer.h"
 
 /*struct book
 {
@@ -31,6 +32,7 @@ void menu()
 	printf( "(u)Update one book\n" );
 	printf( "(i)Add one book\n" );
 	printf( "(m)Remove one book\n" );
+	printf( "(f)Reference\n" );
 	printf( "(q)Quit\n" );
 
 }
@@ -286,6 +288,30 @@ int main()
                 }
                 getchar();
                 break;
+			case 'f':
+				printf( "Input what U want.\n" );
+				printf( "(b)Number of books\n(a)Number of authors\n(m)The author who has the most books\n(h)The most expensive book\n(l)The cheapest book\n" );
+				c = getchar(); getchar();
+				switch ( c )
+				{
+					case 'b':
+						printf( "Number of books is %d.\n", rfrb( &head1 ) );
+						break;
+					case 'a':
+						printf( "Number of author is %d.\n", rfra( &head1 ) );
+						break;
+					case 'm':
+						rfrm( &head1 );
+						break;
+					case 'h':
+						rfrh( &head1 );
+						break;
+					case 'l':
+						rfrl( &head1 );
+						break;
+					default: printf( "Command not found!\n" ); break;
+				}
+				break;
 			default: printf( "Command not found!\n" );
 		}
 
