@@ -2,33 +2,42 @@
 #include<stdlib.h>
 #include<string.h>
 #include "head.h"
-struct book
-{
-    char name[50];
-    char ISBN[8];
-    char author[50];
-    double price;
-    int num[10];
-    struct book *next;
-};
-
 struct book *load()
 {
-    struct book *head;
+    struct book *head,*p;
     head=(struct book *)malloc(sizeof(struct book));
     char line[100];
     FILE *fp;
     fp=fopen("book.csv","r");
     if(fp==NULL)
     {
-        return -1;
+        printf("文件打开失败！\n");
     }
-    while(fgets(line,100,fp)!=NULL)
+    if(fgets(line,100,fp)!=NULL)
     {
-        sscanf(line,"%s%s%s%d",head->ISBN,head->name,head->author,&head->price);    
-        head=head->next;
+        sscanf(line,"%s[^\t] %s[^\t] %s[^\t] %lf",head->ISBN,head->name,head->author,&head->price);    
+        head->next=NULL;
         
     }
+    else
+        return NULL;
+    while(fgets(line,100,fp)!=NULL)
+    {
+	p=head;
+        while(p!=NULL)
+        {
+     	    if(p->next==NULL)
+                break;
+            p=p->next;
+        }
+        struct book *newp=(struct book *)malloc(sizeof(struct book));
+        sscanf(line,"%s[^\t] %s[^\t] %s[^\t] %lf",newp->ISBN,newp->name,newp->author,&newp->price);
+        p->next=newp;
+        newp->next=NULL;
+     }
+    fclose(fp);
+
+
     return head;
 }
 

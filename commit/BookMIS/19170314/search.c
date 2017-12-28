@@ -13,9 +13,9 @@ struct book *Search(struct book *head)
     struct book *p;
     p=(struct book *)malloc(sizeof(struct book));
     printf("你想以何种方式查找图书:\n");
-    printf("[1]通过ISBN码查找");
-    printf("[2]通过作者查找");
-    printf("[3]通过书名关键字查找");
+    printf("[1]通过ISBN码查找\n");
+    printf("[2]通过作者查找\n");
+    printf("[3]通过书名关键字查找\n");
     printf("请输入指令： ");
     scanf("%d",&c);
     switch(c)
@@ -40,7 +40,7 @@ struct book *Search(struct book *head)
                 break;
          case 2:
             printf("请输入所查图书的作者");
-            scanf("%s[^\n]",&author1);
+            scanf("%s[^\n]",author1);
             printf("查询结果：");
             while(p!=NULL)
             {
@@ -56,7 +56,7 @@ struct book *Search(struct book *head)
              break;
         case 3:
             printf("请输入所查图书的书名关键字");
-            scanf("%s[^\n]",&name_keyword);
+            scanf("%s[^\n]",name_keyword);
             printf("查询结果：");
             len1=strlen(name_keyword);
             len2=strlen(p->name);

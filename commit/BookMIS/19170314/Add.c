@@ -2,15 +2,6 @@
 #include<stdlib.h>
 #include<string.h>
 #include "head.h"
-struct book
-{
-    char name[50];
-    char ISBN[8];
-    char author[50];
-    double price;
-    int num[10];
-    struct book *next;
-};
 
 struct book *Add(struct book *head)
 {

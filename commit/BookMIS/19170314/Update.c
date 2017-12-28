@@ -2,20 +2,11 @@
 #include<stdlib.h>
 #include<string.h>
 #include "head.h"
-struct book
-{
-    char name[50];
-    char ISBN[8];
-    char author[50];
-    double price;
-    int num[10];
-    struct book *next;
-};
 
 struct book *Update(struct book *head)
 {
-    char ISBN[8];
-    char author[50];
+    char ISBN1[8];
+    char author1[50];
     char name_keyword[50];
     int c,i,len1,len2,flag=0,mark;
     struct book *p;
@@ -30,11 +21,11 @@ struct book *Update(struct book *head)
      {
         case 1:
             printf("请输入所查图书的ISBN:");
-            scanf("%s[^\n]",ISBN);
+            scanf("%s[^\n]",ISBN1);
             printf("查询结果：");
             while(p!=NULL)
             {
-                if(strcmp(ISBN,p->ISBN)==0)
+                if(strcmp(ISBN1,p->ISBN)==0)
                 {
                      printf("ISBN:%s\t书名：%s\t作者：%s\t价格：%lf\n",p->ISBN,p->name,p->author,p->price);
                      flag=1;
@@ -59,11 +50,11 @@ struct book *Update(struct book *head)
                     
          case 2:
             printf("请输入所查图书的作者");
-            scanf("%s[^\n]",&author);
+            scanf("%s[^\n]",author1);
             printf("查询结果：");
             while(p!=NULL)
             {
-                if(strcmp(author,p->author)==0)
+                if(strcmp(author1,p->author)==0)
                 {
                     printf("ISBN:%s\t 书名：%s\t 作者：%s\t 价格：%lf\n",p->ISBN,p->name,p->author,p->price);
                     flag=1;
@@ -87,7 +78,7 @@ struct book *Update(struct book *head)
              
         case 3:
             printf("请输入所查图书的书名关键字");
-            scanf("%s[^\n]",&name_keyword);
+            scanf("%s[^\n]",name_keyword);
             printf("查询结果：");
             len1=strlen(name_keyword);
             len2=strlen(p->name);

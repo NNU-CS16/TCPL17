@@ -5,12 +5,12 @@
 void menu()
 {    
     printf("***===图书管理系统===***\n");
-    printf("(s)查询图书条目\n");
-    printf("(a)添加图书条目\n");
-    printf("(u)修改图书条目\n");
-    printf("(d)删除图书条目\n");
-    printf("(i)显示统计信息\n");
-    printf("(q)退出系统\n");
+    printf("***(s)查询图书条目***\n");
+    printf("***(a)添加图书条目***\n");
+    printf("***(u)修改图书条目***\n");
+    printf("***(d)删除图书条目***\n");
+    printf("***(i)显示统计信息***\n");
+    printf("***(q)退出系统***\n");
     printf("输入命令： ");
 }
 int main()
@@ -31,22 +31,23 @@ int main()
         switch(cmd)
         {
             case 's':
-                system("cls");
-                head=Search(head);
+                 head=Search(head);
+                 break;
             case 'a':
-                 system("cls");
-	         head=Add(head);
+                 head=Add(head);
+                 break;
             case 'u':
-	        system("cls");
-                head=Update(head);
+	         head=Update(head);
+                 break;
             case 'd':
-                system("cls");
-                head=Delete(head);
+                 head=Delete(head);
+                 break;
             case 'i':
-                system("cls");
-                head=InfoSta(head);
+                 head=InfoSta(head);
+	         break;
             default:
                 printf("error command\n");
+                break;
         }
     }
     return 0;

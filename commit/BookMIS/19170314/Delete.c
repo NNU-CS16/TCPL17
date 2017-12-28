@@ -2,15 +2,6 @@
 #include<stdlib.h>
 #include<string.h>
 #include "head.h"
-struct book
-{
-    char name[50];
-    char ISBN[8];
-    char author[50];
-    double price;
-    int num[10];
-    struct book *next;
-};
 
 struct book *Delete(struct book *head)
 {
@@ -20,7 +11,7 @@ struct book *Delete(struct book *head)
     int i,len1,len2,flag=0;
     prev=NULL;
     printf("请输入要删除的图书的书名关键字");
-            scanf("%s[^\n]",&name_keyword);
+            scanf("%s[^\n]",name_keyword);
             len1=strlen(name_keyword);
             len2=strlen(p->name);
             while(p!=NULL)
