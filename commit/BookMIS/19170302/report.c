@@ -53,6 +53,7 @@ void report()
                         m=n;
                         p7=f;
                 }
+                n=1;
                 p5=p5->next;
         }
         printf("拥有图书数量最多的作者是%s\n\n",p7->writer);
