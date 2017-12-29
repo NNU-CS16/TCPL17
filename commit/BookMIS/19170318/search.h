@@ -37,8 +37,10 @@ Book *srchISBN( Book **head, char *qISBN )
 
 	Book *shift = *head;
 	while ( shift != NULL && strcmp( qISBN, shift -> ISBN ) != 0 )
+	{
 		shift = shift -> next;
-	if ( strcmp( qISBN, shift -> ISBN ) == 0 ) return shift;
+	}
+	if ( shift != NULL ) return shift;
 	return NULL;
 
 }
@@ -51,7 +53,7 @@ Book *srchbname( Book **head, char *qbname )
 	while ( shift != NULL )
 	{
 		flag = 0;
-		for ( i = 0; i <= strlen( shift -> bname ) - strlen( qbname ); ++i )
+		for ( i = 0; i <= ( int )( strlen( shift -> bname ) - strlen( qbname ) ); ++i )
 		{ 	
 			if ( strncmp( qbname, shift -> bname + i, strlen( qbname ) ) == 0 )
 			{
@@ -73,7 +75,7 @@ Book *srchauthor( Book **head, char *qauthor )
 	Book *shift = *head;
 	while ( shift != NULL && strcmp( qauthor, shift -> author ) != 0 )
 		shift = shift -> next;
-	if ( strcmp( qauthor, shift -> author ) == 0 ) return shift;
+	if ( shift != NULL ) return shift;
 	return NULL;
 
 }

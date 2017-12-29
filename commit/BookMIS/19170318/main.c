@@ -224,7 +224,7 @@ int main()
 						break;
 					case 'a':
 						fgets( qauthor, 25, stdin );
-						qbname[ strlen( qauthor ) - 1 ] = '\0';
+						qauthor[ strlen( qauthor ) - 1 ] = '\0';
 						temp = rtrnauthor( &head1, &head2, qauthor );
 						break;
 					case 'i':
@@ -286,7 +286,7 @@ int main()
                         break;
 					default: printf( "Command not found!\n" );
                 }
-                getchar();
+				//getchar();
                 break;
 			case 'f':
 				printf( "Input what U want.\n" );
