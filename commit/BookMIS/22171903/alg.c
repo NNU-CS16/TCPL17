@@ -15,10 +15,10 @@ book* load()
 {
     book* p, *pi;
     book head;
-    head.next = NULL;
-    pi = &head;
     FILE* fp;
     char a[100];
+    head.next = NULL;
+    pi = &head;
     fp = fopen("book.csv", "r");
     if (fp == NULL)
     {
@@ -32,6 +32,7 @@ book* load()
         pi->next = p;
         pi = p;
     }
+    fclose(fp);
     return head.next;
 }
 
@@ -40,8 +41,8 @@ void searchnam(book* head)
 {
     book* p = head;
     int i, j, k, n;
-    k = n = 0;
     char name[50];
+    k = n = 0;
     printf("# 输入书名!注意!空格用”-“代替 #：");
     scanf("%s", name);
     do
@@ -140,17 +141,17 @@ book* update(book* head)
 
 book* insert(book* head)
 {
-    book* p = (book*)malloc(sizeof(book));
-    book* pi,* pp;
-    book* h = head;
+    book* pp,* h;
     int o;
     char isbn[8];
+    h = head;
     printf("======插入图书信息======\n");
     printf("# ISBN #：");
     scanf("%s", isbn);
     pp = searchisbn(h, isbn);
     if (pp == NULL)
     {
+	book* p = (book*)malloc(sizeof(book));
 	strcpy(p->isbn, isbn);
     	printf("# 书名 #：");
     	scanf("%s", p->nam);
@@ -174,10 +175,6 @@ book* insert(book* head)
             printf("# 价格 #：");
             scanf("%lf", &pp->pri);
 	}
-	else
-	{
-	    return head;
-	}
     }
     return head;
 }
@@ -186,8 +183,8 @@ book* insert(book* head)
 book* delete(book* head)
 {
     book* p, *pi;
-    pi = head;
     char isbn[8];
+    pi = head;
     printf("# 输入ISBN #：");
     scanf("%s", isbn);
     p = searchisbn(pi, isbn);
@@ -195,7 +192,6 @@ book* delete(book* head)
 	printf("!!! 未找到 !!!\n");
     else
     {
-	pi = head;
 	while (pi->next != p)
      	{
 	    pi = pi->next;
