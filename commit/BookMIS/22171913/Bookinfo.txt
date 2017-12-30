@@ -1,0 +1,16 @@
+15
+RomeoandJuliet Shakespeare 14151601 30
+PrideandPrejudice Austen 14151602 29.8
+AnimalFarm Orwell 14151603 30.8
+GreatExpectations Dickens 14151604 35
+LordoftheFiles Golding 14151605 27.8
+AConecticutYankeeinKingArthursCourt Twain 14151606 34.8
+DaddyLongLegs Webster 14151607 19.8
+SorrowsofYoungWerther vonGoethe 14151608 28
+CherryOrchard Chekhov 14151609 20.8
+TheDiaryofaYoungGirl Frank 14151610 39.8
+OliverTwist Dickens 14151611 30.8
+BraveNewWorld Huxley 14151612 23.8
+TheOldManandtheSea Hemingway 14151613 24
+AdventureofTomSawyer MarkTwain 14151614 20
+RemainsoftheDay Ishiguro 14151615 25.8
