@@ -1,5 +1,5 @@
-test:main.o Loading.o Searchbook.o Addbook.o Changebook.o Deletebook.o Showbook.o Countbook.o Quit.o
-	gcc -o test main.c Loading.c Searchbook.c Addbook.c Changebook.c Deletebook.c Showbook.c Countbook.c Quit.c 
+test:main.o Loading.o Searchbook.o Addbook.o Changebook.o Deletebook.o Showbook.o Countbook.o 
+	gcc -o test main.c Loading.c Searchbook.c Addbook.c Changebook.c Deletebook.c Showbook.c Countbook.c  
 main.o:main.c head.h
 	gcc -c main.c
 Loading.o:Loading.c head.h
@@ -16,8 +16,5 @@ Showbook.o:Showbook.c head.h
 	gcc -c Showbook.c
 Countbook.o:Countbook.c head.h
 	gcc -c Countbook.c
-Quit.o:Quit.c head.h
-	gcc -c Quit.c
 clean:
-	rm test main.o Searchbook.o Addbook.o Changebook.o Deletebook.o Showbook.o Countbook.o Quit.o
-
+	rm test main.o Searchbook.o Addbook.o Changebook.o Deletebook.o Showbook.o Countbook.o 
