@@ -1,5 +1,6 @@
 edit : main.o
-	gcc -c edit main.o
-main.o: main.c delete.h insert.h list.h search.h return.h revision.h save.h
+	cc -o edit main.o
+main.o: main.c remove.h insert.h delete.h list.h search.h return.h revision.h save.h refer.h
+	cc -c main.c
 clean:
 	rm edit main.o

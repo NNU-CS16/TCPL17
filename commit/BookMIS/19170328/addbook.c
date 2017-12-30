@@ -15,12 +15,12 @@ struct book *addbook(struct book *head)
     printf("价格:");
 	scanf("%lf",&newnode -> price);
 	printf("要添加的数目:");
-	scanf("%d",&newnode -> addnum);
+	scanf("%d",&newnode -> booknum);
 	struct book *p;
 	int flag=0,mark=0;
     p = (struct book *)malloc(sizeof(struct book));
     for(p=head; p!=NULL; p=p->next)
-		if(strcmp(p->ISBN,newp->ISBN)==0)
+		if(strcmp(p->ISBN,newnode->ISBN)==0)
 		{
 			flag=1;
 			break;
@@ -29,7 +29,7 @@ struct book *addbook(struct book *head)
 	{
 		if(head==NULL)
 		{
-			head = newp;
+			head = newnode;
 			head -> next = NULL;
 		}
 		else
@@ -53,12 +53,12 @@ struct book *addbook(struct book *head)
 			}
 			if(mark==0)
 			{
-				p->next=newndoe;
+				p->next=newnode;
 				newnode->next=NULL;
 			}
 		}
 	}
 	else
-		p->num+=newp->num;
+		p -> booknum+=newnode -> booknum;
 	return head;
 }

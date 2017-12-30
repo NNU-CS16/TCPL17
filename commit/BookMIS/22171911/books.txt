@@ -1,0 +1,18 @@
+15
+我们三 杨绛 00000001 20
+明朝那些事儿 当年明月 00000002 225
+SophiesWorld JosteinGaarder 00000003 45
+HarryPeter J.K.Rowling 00000004 200
+TheLadyoftheCamellias AlexandreDumas.fils 00000005 40
+WutheringHeights EmilyJaneBronte 00000006 35
+ATaleofTwoCities CharlesJohnHuffamDickens 00000007 65
+JaneEyre CharlotteBrontë 00000008 55
+VanityFair WilliamMakepeaceThackeray 00000009 70
+Notre-DamedeParis VictorHugo 00000010 60
+TheOldManandtheSea ErnestMillerHemingway 00000011 25
+TheCatcherintheRye JeromeDavidSalinger 00000012 95
+Catch-22 JosephHeller 00000013 15
+Gonewiththewind MargaretMitchell 00000014 30
+Cienañosdesoledad GabrielGarcíaMárquez 00000015 80
+
+

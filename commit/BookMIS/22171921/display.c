@@ -1,7 +1,8 @@
 #include "head.h"
+
 void display()
 {
-    Struct book *head;
+    struct book *head;
     struct book *p = (struct book*)malloc(sizeof(struct book));
     p = head;
     while(p != NULL)
