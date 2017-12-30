@@ -43,7 +43,7 @@ void searchnam(book* head)
     int i, j, k, n;
     char name[50];
     k = n = 0;
-    printf("# 输入书名!注意!空格用”-“代替 #：");
+    printf("书名(空格用“-”代替)：");
     scanf("%s", name);
     do
     {
@@ -74,7 +74,7 @@ void searchnam(book* head)
     }
     while (p != NULL);
     if (k == 0)
-        printf("!!! 未找到 !!!\n");
+        printf("查无此书\n");
 }
 
 
@@ -83,7 +83,7 @@ void searchaut(book* head)
     book* p = head;
     int n = 0;
     char auth[20];
-    printf("# 输入作者 !注意!空格用”-“代替 # ：");
+    printf("作者（空格用“-”代替） ：");
     scanf("%s", auth);
     do
     {
@@ -96,7 +96,7 @@ void searchaut(book* head)
     }
     while (p != NULL);
     if (n == 0)
-	printf("!!! 未找到 !!!\n");
+	printf("查无此书\n");
 }
 
 
@@ -120,19 +120,19 @@ book* update(book* head)
     book* p = head;
     book* pi;
     char isbn[8];
-    printf("# 输入要更改的ISBN #：");
+    printf("输入要更改的ISBN：");
     scanf("%s", isbn);
     pi = searchisbn(p, isbn);
     if (pi == NULL)
-	printf("!!! 未找到 !!!\n");
+	printf("查无此书\n");
     else 
     {
-	printf("======更新图书信息======\n");
-    	printf("# 书名 #：");
+	printf("*******更新图书信息******\n");
+    	printf("书名：");
     	scanf("%s", pi->nam);
-    	printf("# 作者 #：");
+    	printf("作者：");
     	scanf("%s", pi->aut);
-    	printf("# 价格 #：");
+    	printf("价格：");
     	scanf("%lf", &pi->pri);
     }
     return head;
@@ -145,34 +145,34 @@ book* insert(book* head)
     int o;
     char isbn[8];
     h = head;
-    printf("======插入图书信息======\n");
-    printf("# ISBN #：");
+    printf("*******插入图书信息*******\n");
+    printf("ISBN：");
     scanf("%s", isbn);
     pp = searchisbn(h, isbn);
     if (pp == NULL)
     {
 	book* p = (book*)malloc(sizeof(book));
 	strcpy(p->isbn, isbn);
-    	printf("# 书名 #：");
+    	printf("书名：");
     	scanf("%s", p->nam);
-    	printf("# 作者 #：");
+    	printf("作者：");
     	scanf("%s", p->aut);
-    	printf("# 价格 #：");
+    	printf("价格：");
     	scanf("%lf", &p->pri);
     	p->next = head;
     	head = p;
     }
     else
     {
-	printf("!! 已存在，更改信息按1，退出按2 !!：");
+	printf("此书已存在，更改信息请按（1），退出请按（2）：");
         scanf("%d", &o);
         if (o == 1)
 	{
-	    printf("# 书名 #：");
+	    printf("书名：");
             scanf("%s", pp->nam);
-            printf("# 作者 #：");
+            printf("作者：");
             scanf("%s", pp->aut);
-            printf("# 价格 #：");
+            printf("价格：");
             scanf("%lf", &pp->pri);
 	}
     }
@@ -185,11 +185,11 @@ book* delete(book* head)
     book* p, *pi;
     char isbn[8];
     pi = head;
-    printf("# 输入ISBN #：");
+    printf("ISBN：");
     scanf("%s", isbn);
     p = searchisbn(pi, isbn);
     if (p == NULL)
-	printf("!!! 未找到 !!!\n");
+	printf("查无此书\n");
     else
     {
 	while (pi->next != p)
@@ -225,7 +225,7 @@ void report(book* head)
   	i++;
 	p = p->next;
     }
-    printf("@  图书数目：%d\n", i);
+    printf("共计图书有%d本\n", i);
 
 
     p = head;
@@ -252,7 +252,7 @@ void report(book* head)
 	n = 0;
     }
     while (p != NULL);
-    printf("@  图书本数最多的作者：%s\n", pp->aut);
+    printf("拥有图书最多的作者：%s\n", pp->aut);
 
  
     p = head;
@@ -272,7 +272,7 @@ void report(book* head)
 	while (pi != NULL);
         p = p->next;
     }
-    printf("@  作者个数：%d\n", n);
+    printf("共计有%d个作者\n", n);
     
 
     double a;
@@ -285,7 +285,7 @@ void report(book* head)
     	p = p->next;
     }
     while (p != NULL);
-    printf("@  图书最高单价为：%lf\n", a);
+    printf("图书最高单价为：%lf\n", a);
 
 
     p = head;
@@ -297,7 +297,7 @@ void report(book* head)
     	p = p->next;
     }
     while (p != NULL);
-    printf("@  图书最低单价为：%lf\n", a);
+    printf("图书最低单价为：%lf\n", a);
 }
 
 
