@@ -19,6 +19,7 @@ int main()
 	{
 		menu();
 		b=getchar();
+		getchar();
 		if(b=='Q')
 		{
 			Save(head);
