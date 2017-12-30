@@ -12,10 +12,10 @@ book* Load()
 {
 	book* p,*pi;
 	book head;
-	head.next=NULL;
-	pi=&head;
 	FILE* fp;
 	char b[100];
+	head.next=NULL;
+	pi=&head;
 	fp=fopen("Book.csv","r");
 	if(fp==NULL)
 	{
@@ -214,7 +214,7 @@ void Report(book* head)
 		i++;
 		p=p->next;
 	}
-	printf("# The number of books:%d",i);
+	printf("# The number of books:%d\n",i);
 
 	p=head;
 	book* pi;
@@ -229,7 +229,7 @@ void Report(book* head)
 				n++;
 			}
 			pi=pi->next;
-		}while(p!=NULL);
+		}while(pi!=NULL);
 		if(n>m)
 		{
 			m=n;
@@ -238,7 +238,7 @@ void Report(book* head)
 		p=p->next;
 		n=0;
 	}while(p!=NULL);
-	printf("# The writer with the largeest number of books:%s\n",pp->author);
+	printf("# The writer with the largest number of books:%s\n",pp->author);
 
 	p=head;
 	n=i;
@@ -253,7 +253,7 @@ void Report(book* head)
 				break;
 			}
 			pi=pi->next;
-		}while(p!=NULL);
+		}while(pi!=NULL);
 		p=p->next;
 	}
 		printf("# The number of the writers:%d\n",n);
