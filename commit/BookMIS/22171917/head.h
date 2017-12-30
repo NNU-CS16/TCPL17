@@ -13,6 +13,5 @@ struct book *change(struct book *head);
 struct book *delete(struct book *head);
 struct book *account(struct book *head);
 void display(struct book *head);  
-void InFoSta(struct book *head);
 void file(struct book *head);
 #endif
