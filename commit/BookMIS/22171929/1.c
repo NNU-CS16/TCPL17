@@ -35,7 +35,8 @@ int main()
 			case 4:
 				head = modification(head);    break;
 			case 5:
-				head = Delete(head);	break;
+				head = Delete(head);	
+				output(head);	break;
 			case 6:
 				output(head);	break;
 			case 7:
