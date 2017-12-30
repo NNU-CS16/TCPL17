@@ -1,0 +1,170 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include "function.h"
+void print()
+{
+    printf("******************************\n");
+}
+
+void check(struct book *head)
+{
+    struct book *p = head;
+    while (p != NULL)
+    {
+        if(p->price > 0.0)
+            printf("%s %s %s %lf \n",p->bname,p->aname,p->isbn,p->price);
+        p = p->next;
+    }
+}
+
+struct book *add(struct book *head)
+{
+    struct book *p = head;
+    FILE *fp = fopen("book.csv","w");
+    while (p->next !=NULL)
+    {
+        p = p->next;
+    }
+    p = p->next = (struct book *)malloc(sizeof(struct book));
+    scanf("%s%s%s%lf",p->bname,p->aname,p->isbn,&p->price);
+    while (feof(fp));
+        fprintf(fp,"%s    %s    %s    %lf",p->bname,p->aname,p->isbn,p->price);
+    fclose(fp);
+    p->next = NULL;
+    return head;
+}
+void seek(struct book *head)
+{
+    char c;
+    struct book *p = head;
+    char xuan[100];
+    printf("    a:按书名;\n    b:按作者\n    c:按ISBN码\n");
+    scanf(" %c",&c);
+    switch (c)
+    {
+        case 'a':
+            scanf("%s",xuan);
+            while (p != NULL)
+            {
+                for (int i = 0;i <= 50;i++)
+                {
+                    if (p->bname[i] == xuan[i])
+                        if (strncmp(xuan,p->bname+i,strlen(xuan)) == 0)
+                        {
+                            printf("%s %s %s %lf\n",p->bname,p->aname,p->isbn,p->price);
+                            break;
+                        }   
+                }
+                p = p->next;
+            }
+            break;
+        case 'b':
+            scanf("%s",xuan);
+            while (p != NULL)
+            {   
+                if (strcmp(p->aname,xuan) == 0)
+                    printf("%s %s %s %lf\n",p->bname,p->aname,p->isbn,p->price);
+                p = p->next;
+            }
+            break;
+        case 'c':
+            scanf("%s",xuan);
+                 while (p != NULL)
+                 {
+                    if (strcmp(p->isbn,xuan) == 0)
+                        printf("%s %s %s %lf",p->bname,p->aname,p->isbn,p->price);
+                    p = p->next;
+                 }
+                 break;
+        default :break;
+    }
+}
+
+struct book *amend(struct book *head)
+{
+    struct book *p = head;
+    char temp[9];
+    printf("请输入你所要修改的项的IBSN：\n");
+    scanf("%s",temp);
+    while (p != NULL)
+    {
+        if (strcmp(p->isbn,temp) == 0)
+        {
+            printf("请输入修改后的信息：\n");
+            scanf("%s %s %s %lf",p->bname,p->aname,p->isbn,&p->price);
+            break;
+        }
+        p = p->next;
+    }
+    return head;
+}
+
+struct book *del(struct book *head)
+{
+    char temp[9];
+    printf("请输入你所要删除的项的ISBN：\n");
+    scanf("%s",temp);
+    struct book *p = head;
+    struct book *prev = NULL;
+    while (strcmp(p->isbn,temp) != 0)
+    {
+        prev = p;
+        p = p->next;
+    }
+    printf("%s\n",p->bname);
+    prev = p->next->next;
+    free(p);
+    printf("成功！\n");
+    return head;
+}
+void menu()
+{
+    printf("    请选择\n");
+    print();
+    printf("    a:添加信息;\n    b:修改信息;\n    c:删除数目;\n");
+    printf("    d:查看图书;\n    e:图书查找;\n    f:统计数据;\n");
+    printf("    q:退出;\n");
+}
+int main()
+{
+    char cho;
+    struct book *head = (struct book*)malloc(sizeof(struct book));
+    head = link(head);
+    print();
+    printf("    Welcome to the BookMIS\n");
+    print();
+    menu();
+    while (cho != 'q')
+    {
+        cho = getchar();
+        switch (cho)
+        {
+            case 'a':add(head);
+                     printf("成功！\n");
+                     menu();
+                     break;
+            case 'b':amend(head);
+                     printf("成功！\n");
+                     menu();
+                     break;
+            case 'c':del(head);
+                     menu();
+                     break;
+            case 'd':check(head);
+                     menu();
+                     break;
+            case 'e':seek(head);
+                     printf("查找结束！\n");
+                     menu();
+                     break;
+            case 'f'://stat();
+                     menu();
+                     break;
+            case 'q':break;
+            default:break;
+        }
+    }
+    return 0;
+}
+
