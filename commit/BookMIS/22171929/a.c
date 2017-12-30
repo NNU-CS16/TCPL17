@@ -13,7 +13,7 @@ struct Book *creat()
     struct Book *p=head;
     struct Book *q=head;
     p -> next = NULL;
-    FILE *fp = fopen("Booka.csv","r");
+    FILE *fp = fopen("book.csv","r");
     if (fp == NULL)
     {
         printf("you failed");
@@ -53,7 +53,7 @@ void search(struct Book *head)
         	while (p != NULL)
         	{
             	if(strcmp(p->Bname,Bname)==0)
-            		printf ("%s\t%s\t%s\n", p->Bname, p->Wname, p->ISBN),
+            		printf ("%s\t%s\t%s\t%lf\n", p->Bname, p->Wname, p->ISBN,p->Bprice),
             		p=NULL;
             	else p = p->next;
         	}
@@ -63,7 +63,7 @@ void search(struct Book *head)
         	while (p != NULL)
         	{
             	if(strcmp(p->Wname,Wname)==0)
-            		printf ("%s %s %s", p->Bname, p->Wname, p->ISBN),
+            		printf ("%s %s %s %lf\n", p->Bname, p->Wname, p->ISBN,p->Bprice),
             		p=NULL;
             	else p = p->next;
         	}
@@ -73,7 +73,7 @@ void search(struct Book *head)
 			while (p != NULL)
 			{
 				if(strcmp(p->ISBN,ISBN)==0)
-					printf ("%s\t%s\t%s\n", p->Bname, p->Wname, p->ISBN),p=NULL;
+					printf ("%s\t%s\t%s\t%lf\n", p->Bname, p->Wname, p->ISBN,p->Bprice),p=NULL;
 				else p = p->next;
 			}
 			break;
@@ -102,14 +102,16 @@ struct Book *insert(struct Book *head)
 struct Book *Delete(struct Book *head)
 {
 	char Bname[50];
+	char Wname[20];
+	char ISBN[8];
 	printf("输入\n");
-	scanf("%s",Bname);
+	scanf("%s%s%s",Bname,Wname,ISBN);
     struct Book *p,*prev;
     prev = NULL;
     p = head;
     while (p != NULL)
     {
-        if(p->Bname == Bname)
+        if((p->Bname == Bname)&&(p->Wname == Wname)&&(p->ISBN == ISBN))
             break;
         prev = p;
         p = p->next;
@@ -226,7 +228,7 @@ void analyse(struct Book *head)
         i++;
         p = p->next;
     }
-    printf ("the books have:%d",i);
+    printf ("书的总数:%d",i);
     p = head;
     q = head;
     while (p != NULL)
@@ -247,7 +249,7 @@ void analyse(struct Book *head)
     p = p->next;
     n = 0;
     }
-    printf ("tu shu zui duo de zuo zhe:%s\n",newp->Wname);
+    printf ("作者的总数:%s\n",newp->Wname);
     p = head;
     n = i;
     while (p->next != NULL)
@@ -264,7 +266,7 @@ void analyse(struct Book *head)
         } while(q != NULL);
         p = p->next;
     }
-    printf("zuo zhe you %d ge\n",n);
+    printf("作者数目： %d\n",n);
     double a;
     p = head;
     a = p->Bprice;
@@ -274,7 +276,7 @@ void analyse(struct Book *head)
             a = p-> Bprice;
             p = p->next;
     }
-    printf("zui gao dan jia:%lf\n",a);
+    printf("最高价:%lf\n",a);
     double b;
     p = head;
     a = p->Bprice;
@@ -284,6 +286,6 @@ void analyse(struct Book *head)
             b = p->Bprice;
             p = p->next;
     }
-    printf("zui di dan jia wei:%lf\n",a);
+    printf("最低价:%lf\n",a);
 }
 
