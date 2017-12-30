@@ -1,4 +1,5 @@
 #include "head.h"
+
 void statistics()
 {
     int c = 0;
@@ -13,7 +14,7 @@ void statistics()
 	p0 = p0 -> next;
     }
     printf("\t\t图书总数为：%d\n", c);
-    P3 = p1 -> next;
+    p3 = p1 -> next;
     while(p1 != NULL && p3 != NULL)
     {
 	if (p1 -> price < p3 -> price)

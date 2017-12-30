@@ -101,29 +101,27 @@ struct Book *insert(struct Book *head)
 }
 struct Book *Delete(struct Book *head)
 {
-	char Bname[50];
-	char Wname[20];
 	char ISBN[8];
-	printf("输入\n");
-	scanf("%s%s%s",Bname,Wname,ISBN);
+	printf("输入：\n");
+	scanf("%s",ISBN);
     struct Book *p,*prev;
     prev = NULL;
     p = head;
     while (p != NULL)
     {
-        if((p->Bname == Bname)&&(p->Wname == Wname)&&(p->ISBN == ISBN))
+        if(strcmp(p->ISBN,ISBN) == 0)
             break;
         prev = p;
         p = p->next;
     }
     if (p==NULL)
-     return head;
-    if (p==head)
-     head = head->next;
+	    printf("wu");
+    else if (p==head)
+	    head = head->next;
     else
-     prev->next=p->next;
-     free(p);
-     return head;
+    	prev->next=p->next;
+    free(p);
+    return head;
 }
 
 struct Book *modification(struct Book *head)
@@ -140,45 +138,17 @@ struct Book *modification(struct Book *head)
 	char name[50];
 	char writter[20];
 	double price;
-	switch (a)
-    {
-    	case 1:
-    		printf("Bname:");
-    		scanf("%s",name);
-    		while(p!=NULL)
-    		{
-        		if(strcmp(p->ISBN,isbn)==0)
-        			strcpy(p->Bname,name),
-        			printf("%s %s %s %lf",p->Bname,p->Wname,p->ISBN,p->Bprice),
-        			p = NULL;
-        		else p=p->next;
-    		}
-    		break;
-    case 2:
-    	printf("writter:");
-    	scanf("%s",writter);
-    	while(p!=NULL)
-    	{
-        	if(strcmp(p->ISBN,isbn)==0)
-        	strcpy(p->Wname,writter),
-        	printf("%s %s %s %lf",p->Bname,p->Wname,p->ISBN,p->Bprice),
-        	p = NULL;
-        	else p=p->next;
-    	}
-    	break;
-    case 3:
-    	printf("price:");
-    	scanf("%lf",&price);
-    	while(p!=NULL)
-    	{
-        	if(strcmp(p->ISBN,isbn)==0)
-        	p->Bprice=price,
-        	printf("%s %s %s %lf",p->Bname,p->Wname,p->ISBN,p->Bprice),
-       		p = NULL;
-        	else p=p->next;
-    	}
-    	break;
-    }
+	while (p != NULL)
+	{
+    	if(strcmp(p->ISBN,isbn)==0)
+			break;
+		p = p->next;
+	}
+	printf("输入修改的信息，不修改的地方输入原信息");
+	scanf("%s%s%lf",name,writter,&price);
+    strcpy(p->Bname,name);
+    strcpy(p->Wname,writter);
+	p->Bprice = price;
 	return head;
 
 }
@@ -193,7 +163,7 @@ void output(struct Book *head)
      }
 }
 
-
+	
 
 void baocun(struct Book *head)
 {
