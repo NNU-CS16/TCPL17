@@ -9,7 +9,7 @@ delete.o: delete.c head.h
 insert.o: insert.c head.h
 	cc -c insert.c
 output.o: output.c head.h
-	cc -c insert.c
+	cc -c output.c
 loadarray.o: loadarray.c head.h
 	cc -c loadarray.c
 report.o: report.c head.h
