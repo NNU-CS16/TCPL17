@@ -14,8 +14,8 @@ int main ()
     for (i = 0; i < 15; i++)
     {
         p = (book*)malloc(sizeof(book));        
-        scanf ("%s %s %d %lf",p -> name, p -> writer, &p -> ISBN, &p -> price);
-        fprintf (fp,"\t\t%s\t\t\t%s\t\t\t%d\t\t\t%lf\n", p -> name, p -> writer, p -> ISBN, p -> price);
+        scanf ("%s %s %s %lf",p -> book_name, p -> author, p -> ISBN, &p -> price);
+        fprintf (fp,"\t\t%s\t\t\t%s\t\t\t%s\t\t\t%lf\n", p -> book_name, p -> author, p -> ISBN, p -> price);
         p -> next = NULL;
         p = p -> next;
     }
