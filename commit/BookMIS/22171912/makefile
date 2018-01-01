@@ -1,20 +1,20 @@
 test: main.o search.o delete.o add.o show.o load.o count.o modify.o
-	cc -o main main.o search.o delete.o add.o show.o load.o count.o modify.o
-main.o: main.c head.h
-	cc -c main.c
+	sudo gcc -o main.o search.o delete.o add.o show.o load.o count.o modify.o
+main.o: main.c overall.h
+	sudo gcc -c main.c
 search.o: search.c overall.h
-	cc -c search.c
+	sudo gcc -c search.c
 delete.o: delete.c overall.h
-	cc -c delete.c
+	sudo gcc -c delete.c
 add.o: add.c overall.h
-	cc -c add.c
+	sudo gcc -c add.c
 show.o: show.c overall.h
-	cc -c show.c
+	sudo gcc -c show.c
 load.o: load.c overall.h
-	cc -c load.c
+	sudo gcc -c load.c
 count.o: count.c overall.h
-	cc -c count.c
+	sudo gcc -c count.c
 modify.o: modify.c overall.h
-	cc -c modify.c
+	sudo gcc -c modify.c
 clean:
 	rm main.o search.o delete.o add.o show.o load.o count.o modify.o

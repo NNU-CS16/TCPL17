@@ -1,4 +1,4 @@
-#include "head.h"
+#include "overall.h"
 void menu()
 {
   printf("\n图书管理系统：\n");
@@ -20,7 +20,7 @@ void wrong()
 int main()
 {
   struct Node *head;
-  int choice = 7;
+  int choice = 8;
   Load();
   while (1)
   {

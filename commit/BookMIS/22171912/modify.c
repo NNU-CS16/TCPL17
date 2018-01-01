@@ -19,28 +19,24 @@ BOOK* Modify()
 			if (c == 'N')
 			{
 				printf("输入书名：");
-				scanf("%s", name);
-				p -> name = name;
+				scanf("%s", p -> name);
 			}
 			if (c == 'A')
 			{
 				printf("输入作者名：");
-				scanf("%s", author);
-				p -> author = author;
+				scanf("%s", p -> author);
 			}
 			if (c == 'P')
 			{
 				printf("请输入价格：");
-				scanf("%d", &price);
-				p -> price = price;
+				scanf("%lf", &p -> price);
 			}
 			++k;
 		}
-		else if
+		else
 			p = p -> next;
 	}
 	if(k == 0)
 		printf("未查询到结果");
-	}
 	return head;
 }

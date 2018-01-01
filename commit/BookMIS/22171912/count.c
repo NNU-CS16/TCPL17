@@ -17,8 +17,8 @@ void Count_price()
 	int max, min;
 	BOOK* p1 = Load();
 	BOOK* p2 = Load();
-	max = p -> price;
-	min = p -> price;
+	min = p1 -> price;
+	max = p2 -> price;
 	while (p1 != NULL && p2 != NULL)
 	{
 		p1 = p1 -> next;
@@ -30,4 +30,4 @@ void Count_price()
 	}
 	printf("价格最低：%s；价格最高：%s\n", p1 -> name, p2 -> name);
 }
-}
+

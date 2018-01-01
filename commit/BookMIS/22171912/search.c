@@ -3,13 +3,13 @@
 
 void Search()
 {
-	int i = 0, j = 0, k = 0;
+	int i = 0, j = 0, k = 0, temp;
 	char c;
 	char* str, *strp;
 	str = (char *)malloc(sizeof(char));
 	strp = (char *)malloc(sizeof(char));
 	printf("查找ISBN（I）\t查找书名（N）\t查找作者（A）\n请选择功能：");
-	scanf("%c", &c)
+	scanf("%c", &c);
 	while(c)
 	{
 		BOOK* p = Load();
@@ -17,7 +17,7 @@ void Search()
 		if (c == 'I')
 		{
 			printf("请输入ISBN：");
-			scanf("%s", &str);
+			scanf("%s", str);
 			while(p != NULL)
 			{
 				if(strcmp(p -> ISBN,str) == 0)
@@ -35,7 +35,7 @@ void Search()
 		if (c == 'N')
 		{
 			printf("请输入书名：");
-			scanf("%s", &str);
+			scanf("%s", str);
 			while(p != NULL)
 			{
 				strp = p -> name;
@@ -69,7 +69,7 @@ void Search()
 		if (c == 'A')
 		{
 			printf("请输入作者：");
-            scanf("%s", &str);
+            scanf("%s", str);
             while(p != NULL)
             {
                 if(strcmp(p -> author, str) == 0)
