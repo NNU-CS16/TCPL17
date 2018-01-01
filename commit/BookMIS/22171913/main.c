@@ -18,7 +18,7 @@ void menu()
 int main()
 {
 	char t;
-	struct book *head = (struct book*)malloc(sizeof(struct book));
+        Book *head = (Book*)malloc(sizeof(Book));
 	head = Searchbook(head);
 	print();
 	printf("*     BookMIS     *\n");

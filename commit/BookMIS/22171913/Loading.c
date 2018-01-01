@@ -2,9 +2,9 @@
 #include <stdlib.h>
 #include <string.h>
 #include "head.h"
-Book *Loading()
+Book *Loading(Book *head)
 {
-	Book *p, *pre, *head, *Thead;
+	Book *p, *pre, *Thead;
 	char line[100];
 	head = (Book *)malloc(sizeof(Book));
 	head->next = NULL;
