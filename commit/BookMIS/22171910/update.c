@@ -6,7 +6,7 @@
 void update(struct Node *head)
 {
   struct Node *p, *ptr;
-  FILE *fp;
+  FILE* fp;
   int flag = 0;
   char ISBN[8];
   if ((fp = fopen("bookinfo.csv", "w")) == NULL)

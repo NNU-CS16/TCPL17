@@ -1,20 +1,20 @@
-main: main.o search.o delete.o insert.o output.o loadarray.o report.o update.o
-	cc -o main main.o search.o delete.o insert.o output.o loadarray.o report.o update.o
+edit: head.h main.o search.o delete.o insert.o output.o loadarray.o report.o update.o
+	sudo gcc -o edit -g head.h main.o search.o delete.o insert.o output.o loadarray.o report.o update.o
 main.o: main.c head.h
-	cc -c main.c
+	sudo gcc -c -g main.c
 search.o: search.c head.h
-	cc -c search.c
+	sudo gcc -c -g search.c
 delete.o: delete.c head.h
-	cc -c delete.c
+	sudo gcc -c -g delete.c
 insert.o: insert.c head.h
-	cc -c insert.c
+	sudo gcc -c -g insert.c
 output.o: output.c head.h
-	cc -c output.c
+	sudo gcc -c -g output.c
 loadarray.o: loadarray.c head.h
-	cc -c loadarray.c
+	sudo gcc -c -g loadarray.c
 report.o: report.c head.h
-	cc -c report.c
+	sudo gcc -c -g report.c
 update.o: update.c head.h
-	cc -c update.c
+	sudo gcc -c -g update.c
 clean:
-	rm main.o search.o delete.o insert.o output.o loadarray.o report.o update.o
+	rm edit head.h main.o search.o delete.o insert.o output.o loadarray.o report.o update.o
