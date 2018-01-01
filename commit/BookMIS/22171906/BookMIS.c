@@ -15,13 +15,13 @@ void menu()
 	printf("(6) Qeport\n");
 	printf("(0) Quit\n");
 	printf("==================================\n");
-	printf("please enter the command: ");
+	printf("please input number: ");
 		
 }
 
 int errCmd()
 {
-	printf(" error command!\n");
+	printf(" error number!\n");
 	return -1;
 }
 
@@ -35,7 +35,7 @@ int main()
 		menu();
 		cmd = getchar();
 		getchar();
-		if (cmd == 'q')
+		if (cmd == '0')
                 break;
 		switch (cmd)
 			{

@@ -1,7 +1,7 @@
 #include <stdio.h>
-	#include <string.h>
-	#include <stdlib.h>
-	#include "Book.h"
+#include <string.h>
+#include <stdlib.h>
+#include "Book.h"
 	void report(struct book *p)
 	{
 		double max, min;

@@ -1,11 +1,11 @@
-BookMIS:BookMIS.o add.o bload.o change.o cut.o keep.o paixu.o Report.o Search.o 
-	gcc -o BookMIS BookMIS.o add.o bload.o change.o cut.o keep.o paixu.o Report.o Search.o
+BookMIS:BookMIS.o add.o load.o change.o cut.o keep.o paixu.o Report.o Search.o 
+	gcc -o BookMIS BookMIS.o add.o load.o change.o cut.o keep.o paixu.o Report.o Search.o
 BookMIS.o:
 	gcc -c BookMIS.c
 add.o:
 	gcc -c add.c
-bload.o:	
-	gcc -c bload.c
+load.o:	
+	gcc -c load.c
 change.o:	
 	gcc -c change.c
 cut.o:	
@@ -21,4 +21,4 @@ Search.o:
 BookMIS.o:
 	gcc -c BookMIS.c
 clean:
-	BookMIS.o add.o bload.o change.o cut.o keep.o paixu.o Report.o Search.o
+	BookMIS.o add.o load.o change.o cut.o keep.o paixu.o Report.o Search.o

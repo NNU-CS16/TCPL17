@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include "Book.h"
 
-struct book* update(struct book *p)
+void change(struct book *p)
 {
 	struct book *head;
 	head = p;
