@@ -1,22 +1,22 @@
-test:main.o save.o loadbook.o search.o modify.o display.o statistics.o deletebook.o
-	gcc main.o save.o loadbook.o search.o modify.o display.o statistics.o deletebook.o -o test    
-main.o:
-	gcc -c main.c -o main.o
-addbook.o:
-	gcc -c addbook.c -o main.o
-save.o:
-	gcc -c save.c -o save.o
-loadbook.o:
-	gcc -c loadbook.c -o loadbook.o
-search.o:
-	gcc -c search.c -o search.o
-modify.o:
-	gcc -c modify.c -o modify.o
-display.o:
-	gcc -c display.c -o display.o
-deletebook.o:
-	gcc -c deletebook.c -o deletebook.o
-statistics.o:
-	gcc -c statistics.c -o statistics.o
+kyh :main.o save.o addbook.o loadbook.o search.o modify.o display.o statistics.o deletebook.o
+	cc -o kyh main.o save.o addbook.o loadbook.o search.o modify.o display.o statistics.o deletebook.o      
+main.o :main.c kyh.h
+	cc -c main.c 
+addbook.o:addbook.c kyh.h
+	cc -c addbook.c 
+save.o:save.c kyh.h
+	cc -c save.c 
+loadbook.o:loadbook.c kyh.h
+	cc -c loadbook.c
+search.o:search.c kyh.h
+	cc -c search.c 
+modify.o:modify.c kyh.h
+	cc -c modify.c 
+display.o:display.c kyh.h
+	cc -c display.c 
+deletebook.o:deletebook.c kyh.h
+	cc -c deletebook.c 
+statistics.o:statistics.c kyh.h
+	cc -c statistics.c 
 clean:
-	rm main.o addbook.o save.o loadbook.o search.o modify.o displau.o deletebook.o statistics.o 
+	rm kyh main.o addbook.o save.o loadbook.o search.o modify.o displau.o deletebook.o statistics.o 

@@ -31,7 +31,7 @@ int main()
             save(head);
             break;
         }
-        swith(cmd)
+        switch(cmd)
         {
             case 'a':
                     head=add(head);

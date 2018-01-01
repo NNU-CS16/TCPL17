@@ -1,21 +1,23 @@
-main :head.h main.o read.o search.o add.o modify.o delete.o display.o statistics.o
-	cc -o main -g head.h main.o read.o search.o add.o modify.o delete.o display.o statistics.o
+main :head.h main.o read.o menu.o search.o add.o modify.o delete.o display.o statistics.o
+	sudo gcc -o main -g head.h main.o read.o menu.o search.o add.o modify.o delete.o display.o statistics.o
 main.o :main.c head.h
-	cc -c -g main.c
+	sudo gcc -c -g main.c
 read.o :read.c head.h
-	cc -c -g read.c
+	sudo gcc -c -g read.c
 search.o :search.c head.h
-	cc -c -g search.c
+	sudo gcc -c -g search.c
 add.o :add.c head.h
-	cc -c -g add.c
+	sudo gcc -c -g add.c
 modify.o :modify.c head.h
-	cc -c -g modify.c
+	sudo gcc -c -g modify.c
 delete.o :delete.c head.h
-	cc -c -g delete.c
+	sudo gcc -c -g delete.c
 display.o :display.c head.h
-	cc -c -g display.c
+	sudo gcc -c -g display.c
 statistics.o :statistics.c head.h
-	cc -c -g statistics.c
+	sudo gcc -c -g statistics.c
+menu.o :menu.c head.h
+	sudo gcc -c -g menu.c
 clean:
-	rm main head.h main.o read.o search.o add.o modify.o delete.o display.o statistics.o
+	rm main head.h main.o read.o menu.o search.o add.o modify.o delete.o display.o statistics.o
 
