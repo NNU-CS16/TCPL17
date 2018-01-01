@@ -1,6 +1,7 @@
 /*显示图书条目*/
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "head.h"
 void output(struct Node *head)
 {
