@@ -1,5 +1,5 @@
 test: main.o search.o delete.o add.o show.o load.o count.o modify.o
-	sudo gcc -o main.o search.o delete.o add.o show.o load.o count.o modify.o
+	sudo gcc -o main.o search.o  add.o show.o load.o count.o modify.o
 main.o: main.c overall.h
 	sudo gcc -c main.c
 search.o: search.c overall.h
@@ -17,4 +17,4 @@ count.o: count.c overall.h
 modify.o: modify.c overall.h
 	sudo gcc -c modify.c
 clean:
-	rm main.o search.o delete.o add.o show.o load.o count.o modify.o
+	sudo rm test main.o search.o delete.o add.o show.o load.o count.o modify.o
