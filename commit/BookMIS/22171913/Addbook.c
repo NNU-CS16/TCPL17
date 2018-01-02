@@ -2,12 +2,12 @@
 #include <stdlib.h>
 #include <string.h>
 #include "head.h"
-struct Book *Addbook(struct Book *head)
+Book *Addbook(Book *head)
 {
-	struct Book *p, *prev;
+	Book *p, *prev;
 	p = head;
 	prev = NULL;
-	struct Book *newp = (struct Book *)malloc(sizeof(struct Book));
+	Book *newp = (Book *)malloc(sizeof(Book));
 	printf("Please input the name:");
 	    scanf("%[^\n]", newp -> name);
 	printf("Please input the writer:");

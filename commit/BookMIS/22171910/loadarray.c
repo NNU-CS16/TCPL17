@@ -9,8 +9,8 @@ int loadarray(struct Node *head)
   fp = fopen("bookinfo.csv", "r");
   if (fp == NULL)
   {
-    printf("Cannot open his file!\n");
-    exit(0);
+    printf("Cannot open this file!\n");
+    exit(1);
   }
   head = (struct Node *)malloc(sizeof(struct Node));
   if(!head)

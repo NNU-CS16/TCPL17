@@ -2,10 +2,10 @@
 #include "head.h"
 #include <stdlib.h>
 #include <string.h>
-void Searchbook(struct book *head)
+Book *Searchbook(Book *head)
 {
     char m;
-    struct book *p = head;
+    Book *p = head;
     FILE *fp = fopen("Bookinfo.txt", "r");
     char seek[100];
     printf("a:name\n  b:writer\n  c:ISBN\n");
