@@ -8,6 +8,13 @@ Book *Addbook(Book *head)
 	p = head;
 	prev = NULL;
 	Book *newp = (Book *)malloc(sizeof(Book));
+	FILE *fp;
+	fp = fopen("Bookinfo.txt", "a");
+	if (fp == NULL)
+	{
+		printf("Can not open the file!\n");
+		exit(1);
+	}
 	printf("Please input the name:");
 	    scanf("%[^\n]", newp -> name);
 	printf("Please input the writer:");

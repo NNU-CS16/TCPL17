@@ -1,6 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 #include "head.h"
 Book *Changebook(Book *head)
 {
@@ -23,7 +21,7 @@ Book *Changebook(Book *head)
 			scanf("%s", p -> writer);
 			break;
 		case'c':
-			scanf("%2f", &p -> price);
+			scanf("%.2f", &p -> price);
 			break;
 		default:
 			printf("error\n");
