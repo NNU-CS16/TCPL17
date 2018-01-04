@@ -21,7 +21,7 @@ void Add()
 	if (p == NULL)
 	{
 		printf("请输入书名、作者、价格：");
-		scanf("%s%s%p", p -> name, p -> author, p -> price);
+		scanf("%s%s%lf", p -> name, p -> author, &p -> price);
 		p -> next = NULL;
 	}
 	else

@@ -1,6 +1,6 @@
-bookmis:bookmis.o alg.o
-	gcc -o bookmis bookmis.o alg.o
-bookmis.o:bookmis.c alg.h
-	gcc -c bookmis.c
+main:main.o alg.o
+	gcc -o main main.o alg.o
+main.o:main.c alg.h
+	gcc -c main.c
 alg.o:alg.c alg.h
 	gcc -c alg.c
