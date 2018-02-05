@@ -10,7 +10,7 @@ int main()
     scanf("%s", str);
     int flag = Sum( str );
 
-    int arr[50],len = 0;
+    int arr[50],len = 0; //这个数组是用来存放相加之和的数的各位数，存放的时候是从各位数向前存放的  个位数懂？
     while ( flag!=0 )
     {
         arr[len] = flag%10;
@@ -37,7 +37,7 @@ int Sum( char str[] )
         flag = flag+str[i]-'0';
     return flag;
 }
-
+//这是用来计算各位数相加之和的函数，返回值是相加之和  字符串里面的数字相加需要件去'0'字符串是用ASCII 吗计算的  你把他看成是ASCII吗就好了
 void duqu( int num )
 {
     switch ( num )
